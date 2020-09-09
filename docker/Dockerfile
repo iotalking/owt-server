@@ -14,6 +14,8 @@ RUN apt-get update
 # Install utils
 RUN apt-get install -y ca-certificates git lsb-release mongodb nodejs npm sudo wget
 
+RUN npm install -g npm@latest
+
 RUN npm install -g grunt-cli node-gyp
 
 # Keep proxy environment for sudo
