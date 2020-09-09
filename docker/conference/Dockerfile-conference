@@ -7,6 +7,8 @@ ENV CLIENT_SAMPLE_PATH=/owt-client-javascript/dist/samples/conference
 
 WORKDIR /owt-server
 
+RUN mkdir -p /root/.cache/node-gyp/
+
 RUN ./scripts/build.js -t all --check
 RUN ./scripts/pack.js -t all --install-module --sample-path $CLIENT_SAMPLE_PATH .
 
